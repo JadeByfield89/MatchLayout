@@ -1,16 +1,10 @@
 package com.permoveo.matchlayout.view;
 
-import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.util.TypedValue;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -21,10 +15,8 @@ import com.permoveo.matchlayout.adapter.MatchLayoutViewAdapter;
 import com.permoveo.matchlayout.model.Match;
 import com.permoveo.matchlayout.presenter.MatchLayoutPresenter;
 import com.permoveo.matchlayout.util.GridItemDecoration;
-import com.permoveo.matchlayout.util.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -52,6 +44,7 @@ public class MatchLayoutActivity extends AppCompatActivity implements MatchLayou
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        mPresenter.onCreate();
 
 
         mAdapter = new MatchLayoutViewAdapter();
@@ -64,6 +57,7 @@ public class MatchLayoutActivity extends AppCompatActivity implements MatchLayou
 
     }
 
+
     @Override
     public void loadMatches() {
         mPresenter.fetchResults();
@@ -72,7 +66,7 @@ public class MatchLayoutActivity extends AppCompatActivity implements MatchLayou
     @Override
     public void displayResults(ArrayList<Match> results) {
 
-        // Let's hide our progress spinner and display the results
+        // Let's hide the progress spinner and display the results
         mProgress.setVisibility(View.INVISIBLE);
         mMatchList.setVisibility(View.VISIBLE);
 
@@ -84,6 +78,7 @@ public class MatchLayoutActivity extends AppCompatActivity implements MatchLayou
     public void reportError(VolleyError error) {
         Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     protected void onPause() {

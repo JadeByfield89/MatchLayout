@@ -60,7 +60,9 @@ public class MatchLayoutViewAdapter extends RecyclerView.Adapter<MatchLayoutView
 
 
         // Load the profile photo
-        Picasso.with(holder.mPhoto.getContext()).load(photoUrl).fit().into(holder.mPhoto);
+        if(photoUrl != null && !photoUrl.isEmpty()) {
+            Picasso.with(holder.mPhoto.getContext()).load(photoUrl).fit().into(holder.mPhoto);
+        }
 
         // Display the username
         String username = mMatches.get(position).getUsername();

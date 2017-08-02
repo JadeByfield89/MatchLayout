@@ -15,12 +15,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by byfieldj on 8/1/17.
  * <p>
- * This class makes the network call to the mock Match API endpoint and returns to us a list of match results.
+ * This class makes the network call to the sample Match API endpoint and returns to us a list of match results.
  */
 
 public class MatchRequest {

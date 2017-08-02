@@ -12,7 +12,7 @@ import static com.android.volley.VolleyLog.TAG;
  * <p>
  * <p>
  * This simple POJO class represents a single result from our list of JSON objects returned by the Match endpoint call.
- * Here we parse the JSON and extract the relevant object's into fields(username, age, location, and match percentage).
+ * Here we parse the JSON and extract the necessary fields(username, age, location, and match percentage).
  */
 
 public class Match {

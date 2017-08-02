@@ -4,7 +4,6 @@ import com.android.volley.VolleyError;
 import com.permoveo.matchlayout.model.Match;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by byfieldj on 8/1/17.
