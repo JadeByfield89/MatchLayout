@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/tv_username"
-            android:text="Username"
+            android:text="@string/display_username"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/iv_avatar"
             android:layout_marginTop="8dp"
@@ -31,7 +31,8 @@
             android:id="@+id/tv_age_desc"
             android:layout_below="@id/tv_username"
             android:layout_marginTop="8dp"
-            android:text="35•Brooklyn, NY"
+            android:textSize="10sp"
+            android:text="@string/display_age_location"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -41,7 +42,8 @@
             android:id="@+id/tv_match_percentage"
             android:layout_below="@id/tv_age_desc"
             android:layout_marginTop="8dp"
-            android:text="35%"
+            android:text="@string/display_match_percentage"
+            android:textSize="10sp"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -50,7 +52,8 @@
             android:id="@+id/tv_match_label"
             android:layout_below="@id/tv_match_percentage"
             android:layout_marginTop="3dp"
-            android:text="Match"
+            android:text="@string/display_match"
+            android:textSize="10sp"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
